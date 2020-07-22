@@ -1,0 +1,216 @@
+
+#scene {
+    -webkit-animation-name: cool-effect;
+    -moz-animation-name: cool-effect;
+    animation-name: cool-effect;
+
+    -webkit-animation-duration: 60s;
+    -moz-animation-duration: 60s;
+    animation-duration: 60s;
+
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    animation-timing-function: linear;
+
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+
+    -webkit-animation-direction: alternate;
+    -moz-animation-direction: alternate;
+    animation-direction: alternate;
+
+    -webkit-transform-origin: 50% 50% 0;
+    -moz-transform-origin: 50% 50% 0;
+    transform-origin: 50% 50% 0;
+
+ 
+}
+   .bg {
+        position: relative;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        max-width: 100%;
+        width: 100%;
+        height: 1000px;
+        overflow-y: hidden !important;
+        z-index: 10;
+    }
+@-webkit-keyframes cool-effect {
+    0% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1.4);
+    }
+}
+
+@-moz-keyframes cool-effect {
+    0% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1.4);
+    }
+}
+
+@keyframes cool-effect {
+    0% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1.4);
+    }
+}
+//top border
+.forwardBorderTrain:before {
+    border-top: 3px solid black;
+    transition-timing-function: linear;
+}
+
+//bottom border
+.forwardBorderTrain:after {
+    border-bottom: 3px solid black;
+    transition-timing-function: ease-in;
+}
+
+//left border
+.forwardBorderTrain .ui-border-element:before {
+    border-left: 3px solid black;
+    transition-timing-function: ease-out;
+}
+
+//right border
+.forwardBorderTrain .ui-border-element:after {
+    border-right: 3px solid black;
+    transition-timing-function: ease-in-out;
+}
+
+/* This only changes this particular animation duration */
+.animate__animated.animate__heartBeat {
+    --animate-duration: 2s;
+}
+
+/* This changes all the animations globaly */
+:root {
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
+}
+
+/* All animations will take twice as long to finish */
+
+/* Only this element will take half the time to finish */
+.header__start {
+    --animate-duration: 1s;
+}
+.hot.active,
+.history.active,
+.footer.active,
+.servise.active,
+.give.active,
+.photo.active,
+.reviews.active,
+.price.active,
+.why.active,
+.content.active,
+.history__wrapper.active,
+.header__wrapper.active {
+    display: block;
+}
+
+
+.shy-menu-hamburger {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 54px;
+    height: 54px;
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.shy-menu-hamburger > .layer {
+    background-color: #fff;
+    border-radius: 1px;
+    display: block;
+    height: 2px;
+    overflow: hidden;
+    position: absolute;
+    left: 5px;
+    width: 18px;
+}
+
+.shy-menu-hamburger .layer.top {
+    top: 9px;
+}
+.is-open .shy-menu-hamburger .layer.top {
+    top: 17px;
+    left: 5px;
+    transform: rotate(45deg);
+}
+.shy-menu-hamburger .layer.mid {
+    top: 16px;
+}
+.is-open .shy-menu-hamburger .layer.mid {
+    opacity: 0;
+    left: 0;
+}
+.shy-menu-hamburger .layer.btm {
+    top: 23px;
+}
+.is-open .shy-menu-hamburger .layer.btm {
+    top: 17px;
+    left: 5px;
+    transform: rotate(-45deg);
+}
+* {
+    -moz-transition: all 0.4s cubic-bezier(0.1, 0.7, 0.3, 1);
+    -webkit-transition: all 0.4s cubic-bezier(0.1, 0.7, 0.3, 1);
+    -o-transition: all 0.4s cubic-bezier(0.1, 0.7, 0.3, 1);
+    -ms-transition: all 0.4s cubic-bezier(0.1, 0.7, 0.3, 1);
+    transition: all 0.4s cubic-bezier(0.1, 0.7, 0.3, 1);
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li{
+        margin-bottom: 25px;
+        margin-left: 3px;
+    }
+}
+
+.shy-menu {
+    display: none;
+    height: 35px;
+    padding: 5px;
+    width: 35px;
+
+    background-color: rgba(33, 40, 44, 1);
+    border-bottom-right-radius: 10px;
+    color: #fff;
+}
+.shy-menu.is-open,
+.shy-menu:hover {
+    background-color: rgba(33, 40, 44, 1);
+}
+
+.shy-menu.is-open {
+    height: 250px;
+    width: 150px;
+}
+
+.shy-menu-panel {
+    margin-left: -100px;
+    a {
+        font-weight: 600px;
+        font-size: 16px;
+        color: #fff;
+    }
+}
+.is-open .shy-menu-panel {
+    margin-left: 0;
+}

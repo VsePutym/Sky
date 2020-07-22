@@ -1,0 +1,146 @@
+body,
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+html.visible {
+   
+    overflow-y: visible !important;
+}
+body {
+    overflow-y: hidden;
+    height: 100%;
+    overflow-x: hidden;
+    max-width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    color: #999999;
+    font-family: "Montserrat", sans-serif;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container-fluid {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 0px;
+}
+
+@media (max-width: 720px) {
+    .container-fluid {
+        padding: 0 0px;
+    }
+}
+
+.contacts,
+.give,
+.reviews,
+.photo,
+.price {
+    position: relative;
+    &::before {
+        background-color: #fff;
+        box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.1);
+        content: "";
+        height: 180px;
+        width: 4000px;
+        position: absolute;
+        top: 0;
+    }
+    padding-top: 30px;
+    .title {
+        color: #6a6a6a;
+    }
+    .point {
+        width: 5px;
+        height: 5px;
+        background-color: $orange;
+    }
+    .point:after,
+    .point:before {
+        height: 1px;
+        background-color: #6a6a6a;
+    }
+}
+.contacts__title,
+.reviews__title,
+.photo__title,
+.photo__title,
+.give__title,
+.price__item,
+.price__title,
+.why__title {
+    text-align: center;
+    padding-bottom: 50px;
+    &:after {
+        display: none;
+    }
+}
+button {
+    border: none;
+    outline: none;
+}
+
+
+#button-up {
+    display: block;
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    color: $orange;
+    text-align: center;
+    font-size: 30px;
+    padding: 15px;
+    transition: 0.3s;
+    z-index: 100;
+}
+
+#button-up:hover {
+    cursor: pointer;
+    transition: 0.3s;
+}
