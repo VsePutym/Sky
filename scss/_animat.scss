@@ -201,7 +201,7 @@ ul {
 .shy-menu.is-open {
     height: 250px;
     width: 150px;
-    border-radius: 20px;
+   
 }
 
 .shy-menu-panel {
@@ -211,7 +211,7 @@ ul {
         font-size: 16px;
         color: #fff;
         font-style: oblique;
-        padding-left: 15px;
+        padding-left: 10px;
         position: relative;
         &:before{
             content:"";
