@@ -185,9 +185,9 @@ ul {
 
 .shy-menu {
     display: none;
-    height: 35px;
+    height: 44px;
     padding: 5px;
-    width: 35px;
+    width: 40px;
 
     background-color: rgba(33, 40, 44, 1);
     border-bottom-right-radius: 10px;
@@ -201,14 +201,26 @@ ul {
 .shy-menu.is-open {
     height: 250px;
     width: 150px;
+    border-radius: 20px;
 }
 
 .shy-menu-panel {
-    margin-left: -100px;
+    margin-left: -150px;
     a {
         font-weight: 600px;
         font-size: 16px;
         color: #fff;
+        font-style: oblique;
+        padding-left: 15px;
+        position: relative;
+        &:before{
+            content:"";
+            height: 2px;
+            width: 100px;
+            background-color: $orange;
+            position: absolute;
+            bottom: -10px;
+        }
     }
 }
 .is-open .shy-menu-panel {
